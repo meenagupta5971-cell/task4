@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pragya Gupta | Portfolio - Task 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h2>Pragya Gupta</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#todo">To-Do</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Hi, I'm Pragya Gupta 👋</h1>
+  <p>Web Developer | HTML, CSS & JavaScript</p>
+  <a href="#projects"><button>View My Work</button></a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a Web Development Intern at ApexPlanet Software Pvt. Ltd. I love building responsive and interactive websites using HTML, CSS and JavaScript.</p>
+  <p><b>Skills:</b> HTML | CSS | JavaScript | GitHub | Responsive Design | API Integration</p>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="card-box">
+    <div class="card"><h3>Task 1 - Basic Webpage</h3><p>Simple webpage with HTML, CSS & JS alert button.</p></div>
+    <div class="card"><h3>Task 2 - Contact Form & To-Do</h3><p>Form validation, Flexbox, Grid & Dynamic To-Do List.</p></div>
+    <div class="card"><h3>Task 3 - Quiz & Joke API</h3><p>Interactive Quiz + Live Joke API with Fetch.</p></div>
+  </div>
+</section>
+
+<section id="todo">
+  <h2>My To-Do List - With Local Storage</h2>
+  <input type="text" id="todoInput" placeholder="Add new task...">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="todoList"></ul>
+  <p style="font-size:13px; color:gray;">Note: Refresh karne pe bhi tasks save rahenge!</p>
+</section>
+
+<section id="products">
+  <h2>Product Listing - Filter & Sort</h2>
+  <select id="filterCategory" onchange="showProducts()">
+    <option value="All">All Categories</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Books">Books</option>
+  </select>
+  <select id="sortBy" onchange="showProducts()">
+    <option value="default">Sort By</option>
+    <option value="low">Price: Low to High</option>
+    <option value="high">Price: High to Low</option>
+    <option value="rating">Rating: High to Low</option>
+  </select>
+  <div id="productList" class="card-box"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="return sendMessage(event)">
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+    <input type="email" id="email" placeholder="Your Email" required><br><br>
+    <textarea id="msg" placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="formMsg"></p>
+</section>
+
+<footer><p>© 2026 Pragya Gupta | ApexPlanet Task 4</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
